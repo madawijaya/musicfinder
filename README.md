@@ -13,7 +13,7 @@ A Flutter application designed for music discovery, real-time song search, synch
 ## Tech Stack
 
 - **Framework**: Flutter (Dart)
-- **Target Platform**: Android
+- **Target Platforms**: Android and Web
 - **State & Local Persistence**: Shared Preferences (`shared_preferences`)
 
 ## Project Structure
@@ -48,6 +48,7 @@ Ensure the following tools are installed on your environment:
 - Flutter SDK (`>= 3.0.0`)
 - Android Studio or VS Code with Flutter extensions
 - Android Virtual Device (AVD) or physical testing device
+- Google Chrome (for web)
 
 ### Installation
 
@@ -66,10 +67,19 @@ Ensure the following tools are installed on your environment:
    flutter pub get
    ```
 
-4. Run the application:
+4. Run the application in Chrome:
+   ```bash
+   flutter run -d chrome
+   ```
+
+   To run on Android instead, start an emulator or connect a device, then use:
    ```bash
    flutter run
    ```
+
+   On Windows, if a build command reports that a path such as `C:\Users\...` is
+   not recognized, use a Flutter SDK path without spaces and put its `bin`
+   directory first on `PATH`.
 
 ## Testing
 
